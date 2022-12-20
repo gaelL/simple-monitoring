@@ -1,0 +1,21 @@
+consumer_frequency: 0.1
+default_fetch_period: 20s
+urls:
+  - url: https://www.google.com
+    label: google
+    fetch_period: 20s
+s3_buckets:
+  - name: my_bucket
+    key: object_name
+    access_key: ......
+    secret_key: ......
+    endpoint: https://s3.eu-west-1.amazonaws.com
+    fetch_period: 20s
+    file_size: 100 # in Ko
+    region: eu-west-1
+vault:
+  - name: myvault
+    url: https://....
+    role_id: ...
+    secret_id: ...
+    key: my/key/path

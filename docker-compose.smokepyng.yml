@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  smokepyng:
+    privileged: true
+    build:
+      context: smokepyng
+      dockerfile: ./Dockerfile
+    container_name: smokepyng
+    restart: unless-stopped
+    expose:
+        - "8000"
+    networks:
+      - monitoring
+
+  prometheus:
+    depends_on:
+      - node-exporter
+      - smokepyng

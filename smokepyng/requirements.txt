@@ -1,0 +1,9 @@
+prometheus-client
+pyyaml
+requests
+
+# S3
+boto3
+
+# Vault
+hvac

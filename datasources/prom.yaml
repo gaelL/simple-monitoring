@@ -1,0 +1,23 @@
+# config file version
+apiVersion: 1
+
+datasources:
+  - name: Prometheus
+    type: prometheus
+    access: proxy
+    orgId: 1
+    uid: xB0EtzD4k
+    url: http://prometheus:9090
+    user:
+    database:
+    basicAuth: false
+    basicAuthUser:
+    withCredentials: false
+    isDefault: true
+    jsonData:
+      httpMethod: "POST"
+      timeInterval: "1m"
+    secureJsonData: {}
+    version: 2
+    editable: false
+
